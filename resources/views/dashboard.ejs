@@ -1,0 +1,103 @@
+
+<section class="dashboard">
+    
+  <div class="flex justify-center">
+      <div class="dashboard w-60 my-2">
+      <ul class="list-reset">
+      <li class="border-b-2">
+          <a href="#" class="d block rounded-r-3xl p-4 text-grey-darker font-bold border-purple bg-grey-lighter">Dashboard</a>
+          
+      </li>
+      <li class="border-b-2">
+          <a href="/aboutus" class="block rounded-r-3xl p-4 text-grey-darker font-bold border-grey-lighter hover:border-purple-light hover:bg-grey-lighter ">About us</a>
+      </li>
+      <li class="services" class="border-b-2">
+        <div class="dropdown">
+        
+          <a href="#" class="block rounded-r-3xl p-4 text-grey-darker font-bold border-grey-lighter hover:border-purple-light hover:bg-grey-lighter ">Services</a>
+          <ul class="dropdown-menu hidden ml-8 w-60">
+            <li >
+                <a href="/transactions" class="block rounded-r-3xl py-2 pl-2 text-grey-darker font-bold border-grey-lighter hover:border-purple-light hover:bg-grey-lighter ">Transaction Statement</a>
+            </li>
+            <li>
+              <a href="/pay" class="block rounded-r-3xl py-2 pl-2  text-grey-darker font-bold border-grey-lighter hover:border-purple-light hover:bg-grey-lighter ">Send Money</a>
+            </li>
+            <li>
+              <a href="/fixeddeposit" class="block rounded-r-3xl py-2 pl-2  text-grey-darker font-bold border-grey-lighter hover:border-purple-light hover:bg-grey-lighter ">Fixed deposit</a>
+            </li>
+            <li>
+              <a href="/loan" class="block rounded-r-3xl py-2 pl-2  text-grey-darker font-bold border-purple hover:bg-grey-lighter ">Loan</a>
+            </li>
+            <li>
+              <a href="/shares" class="block rounded-r-3xl py-2 pl-2  text-grey-darker font-bold border-purple hover:bg-grey-lighter ">Shares/ Demat</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-b-2 border-t-2">
+          <a href="/downloads" class="block rounded-r-3xl p-4 text-grey-darker font-bold border-grey-lighter hover:border-purple-light hover:bg-grey-lighter ">Downloads</a>
+      </li>
+      <li class="border-b-2">
+          <a href="/customercare" class="block rounded-r-3xl p-4 text-grey-darker font-bold border-grey-lighter hover:border-purple-light hover:bg-grey-lighter ">Customer Care</a>
+      </li>
+      
+        
+      
+      </ul>
+  </div>
+
+
+  <div class="dash w-full p-3 ml-7">
+    <div class=" w-full">
+  <div class="dash rounded-lg shadow-lg bg-gray-600 w-full flex h-50 flex-wrap p-3 antialiased " style="
+    background-image: url('https://images.unsplash.com/photo-1578836537282-3171d77f8632?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+    background-repeat: no-repat;
+    background-size: cover;
+    background-blend-mode: multiply;
+  ">
+    <div class="md:w-1/3 w-full">
+      <img class="rounded-lg shadow-lg antialiased bg-white rounded-full mx-2 my-2 border-r-4" width="150px" height="150px" src="/media/user1.png">  
+    </div>
+    <div class="md:w-2/3 w-full px-3 flex flex-row flex-wrap">
+      <div class="w-full text-right text-gray-700 font-semibold relative pt-3 md:pt-0">
+        <div class="text-2xl text-white leading-tight"></div>
+        <div class="text-normal text-gray-300 hover:text-gray-400 cursor-pointer"><span class="border-b border-dashed border-gray-500 pb-1"> <%= user.name %></span></div>
+        <div class="text-normal text-gray-300 hover:text-gray-400 cursor-pointer"><span class="pb-1">Account Number: <%= user.account_number %></span></div>
+        <div class="text-sm text-gray-300 hover:text-gray-400 cursor-pointer md:absolute pt-3 md:pt-0 bottom-0 right-0"><button class="balance bg-indigo-500 text-white px-4 py-2 border rounded-md hover:bg-white hover:border-indigo-500 hover:text-black ">
+        Available Balance: Rs <b><%= user.balance %> </b>
+        </button></div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  </div>
+      <div class="flex items-center justify-center ml-40">
+        <div class="mx-5 place-content-center w-1/2">
+            <div class="bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
+              <h1 class="text-6xl py-3">Pay</h1>
+            </div>
+            <div class="bg-white py-8 px-10 text-center rounded-md shadow-lg transform -translate-y-20 sm:-translate-y-24 max-w-xs mx-auto">
+              <img class="w-20 h-20 object-cover rounded-full mx-auto shadow-lg" src="/media/pay.jpg" alt="User avatar">
+              <p class="capitalize text-xl mt-1"><%= user.name %></p>
+              <span class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12"><div class="bg-green-400 rounded-full w-2.5 h-2.5 block mr-2"></div>Active</span>
+              <button class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline" type="submit"><a href="/pay">Send money</a></button>
+            </div>
+        </div>
+        
+        <div class="mx-5 place-content-center w-1/2 px-3">
+            <div class="bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl text-white p-8 text-center h-72 max-w-sm mx-auto">
+              <h1 class="text-6xl py-3">Recieve</h1>
+            </div>
+            <div class="bg-white py-8 px-10 text-center rounded-md shadow-lg transform -translate-y-20 sm:-translate-y-24 max-w-xs mx-auto">
+              <img class="w-20 h-20 object-cover rounded-full mx-auto shadow-lg" src="/media/logo.png" alt="User avatar">
+              <p class="capitalize text-xl mt-1"><%= user.name %></p>
+              <span class="flex items-center border rounded-full w-24 pr-2 justify-center mx-auto mt-2 mb-12"><div class="bg-green-400 rounded-full w-2.5 h-2.5 block mr-2"></div>Active</span>
+              <button class="rounded-md bg-gradient-to-r from-blue-400 to-indigo-500 text-xl text-white pt-3 pb-4 px-8 inline">Recieve money</button>
+            </div>
+        </div>
+
+
+      
+</section>

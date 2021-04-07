@@ -1,0 +1,82 @@
+<section class="pt-5">
+    <div>
+        <h1 class="text-lg mx-5 font-bold ">Account details: </h1>
+    </div>
+    <div  class="grid cols-1 px-10 m-5 bg-gray-200 rounded-lg py-10 mb-10">
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">Name: </div>
+        <div><%= client.name %></div>
+    </div>
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">Mobile Number: </div>
+        <div><%= client.mobile_no %></div>
+    </div>
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">Account Number: </div>
+        <div><%= client.account_number %></div>
+    </div>
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">Email: </div>
+        <div><%= client.email %></div>
+    </div>
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">Bank name: </div>
+        <div><%= client.bank_name %></div>
+    </div>
+
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">Branch name: </div>
+        <div><%= client.branch_name %></div>
+    </div>
+
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">State: </div>
+        <div><%= client.state %></div>
+    </div>
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">City: </div>
+        <div><%= client.city %></div>
+    </div>
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">Pincode: </div>
+        <div><%= client.area_pincode %></div>
+    </div>
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">Residence Number: </div>
+        <div><%= client.residence %></div>
+    </div>
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">Account Created on:  </div>
+        <div><%= client.createdAt %></div>
+    </div>
+
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">Last Used on:  </div>
+        <div><%= client.updatedAt %></div>
+    </div>
+
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">Available Balance:  </div>
+        <div>Rs <%= client.balance %></div>
+    </div>
+
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">Loan Balance:  </div>
+        <div>Rs <%= client.loan_bal %></div>
+    </div>
+
+    <div class="flex space-x-5 mt-3">
+        <div class="font-bold text-blue-600">Fixed deposit Balance:  </div>
+        <div>Rs <%= client.fixed_bal %></div>
+    </div>
+</div>
+
+
+<div>
+    <h1 class="text-lg mx-5 font-bold ">Transactions: </h1>
+</div>
+<div>
+    <a href="/admin/transactions" class="block p-4 px-7 mb-10 text-blue-600 underline border-grey-lighter hover:border-purple-light hover:bg-grey-lighter border-r-4">Click to view transaction statement</a>
+
+</div>
+</section>

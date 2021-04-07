@@ -1,0 +1,100 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript">
+    function Export() {
+      
+        html2canvas(document.getElementById('transactions'), {
+            onrendered: function (canvas) {
+                var data = canvas.toDataURL();
+                var docDefinition = {
+                    content: [{
+                        image: data,
+                        width: 500
+                    }]
+                };
+                pdfMake.createPdf(docDefinition).download("Table.pdf");
+            }
+        });
+    }
+  </script>
+
+<section class="transactions">
+    <h1 class="font-bold text-xl py-2 text-blue-800 text-center">Transaction statement for account number: <%= t[0].my_account_number %></h1>
+    <!-- component -->
+<div>
+    <table class="min-w-full table-auto" id="transactions">
+      <thead class="justify-between">
+        <tr class="bg-gray-800">
+          <th class="px-7 py-1">
+            <span class="text-gray-300"></span>
+          </th>
+          <th class="px-7 py-1">
+            <span class="text-gray-300">Name</span>
+          </th>
+          <th class="px-7 py-1">
+            <span class="text-gray-300">Account Number</span>
+          </th>
+          <th class="px-7 py-1">
+            <span class="text-gray-300">Transaction Id</span>
+          </th>
+          <th class="px-7 py-1">
+            <span class="text-gray-300">Date</span>
+          </th>
+
+          <th class="px-7 py-1">
+            <span class="text-gray-300">Time</span>
+          </th>
+
+          <th class="px-7 py-1">
+            <span class="text-gray-300">Credit</span>
+          </th>
+
+          <th class="px-7 py-1">
+            <span class="text-gray-300">Debit</span>
+          </th>
+          <th class="px-7 py-1">
+            <span class="text-gray-300">Balance</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="bg-gray-200">
+        <% for(var i=0; i < t.length; i++) { %>
+        <tr class="bg-white border-4 border-gray-200">
+          <td class="px-9 py-2 flex flex-row items-center">
+            <img
+              class="h-8 w-8 rounded-full object-cover "
+              src="/media/logo.png"
+              alt=""
+            />
+          </td>
+          <td>
+            <span class="text-center ml-2 font-semibold"><%= t[i].account_name%></span>
+          </td>
+          <td class="px-7 py-1">
+            <span class="text-center ml-5 font-semibold"><%= t[i].account_number%></span>
+          </td>
+          <td class="px-7 py-1">
+            <span><%= t[i]._id%></span>
+          </td>
+          <td class="px-7 py-1">
+            <span><%= t[i].date%></span>
+          </td>
+          <td class="px-7 py-1">
+            <span><%= t[i].time%></span>
+          </td>
+          <td class="px-7 py-1">
+            <span>Rs. <%= t[i].credit%></span>
+          </td>
+          <td class="px-7 py-1">
+            <span>Rs. <%= t[i].debit%></span>
+          </td>
+          <td class="px-7 py-1">
+            <span>Rs. <%= t[i].balance%></span>
+          </td>
+          <% } %>
+      </tbody>
+    </table>
+  </div>
+  <input type="button" class="download-btn px-2 py-2 mx-2 my-2 outline-none" id="btnExport" value="Click to download" onclick="Export()" />
+</section>
+

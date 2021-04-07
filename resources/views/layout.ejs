@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dpay</title>
+    <link rel="shortcut icon" type="image/png" href="/media/logo.png"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" src="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css">
+
+</head>
+<body class="">
+    <div class="wrapper">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-4">
+        <div>
+            <a href="/"><img src="/media/logo.png" height="100px" width="100px" ></a>
+        </div>
+        <div>
+            <ul class="flex items-center">
+                
+                <% if(user){ %>
+                    <% if(user.role=="customer") { %>
+                <li class="ml-6"><a href="/pay">Pay</a></li >
+                <li class="ml-6"><a href="/dashboard">Dashboard</a></li >
+                    <%} %>
+                <li class="ml-6">
+                    
+                <form id="logout" action="/logout" method="POST">
+                    <a onclick="document.getElementById('logout').submit()" href="#">Log out</a>
+                </form> 
+                </li >
+                <% if(user.role=="admin"){ %>
+                <li class="admin ml-6 p-2 rounded-3xl"><a href="/admin" class="p-2 text-white font-bold">Admin</a></li>
+                <% }} else { %>
+                <li class="ml-6"><a href="/register">Register</a></li >
+                <li class="ml-6"><a href="/login">Login</a></li>
+                <% } %>
+                
+                
+
+            </ul>
+        </div>
+    </nav>
+    
+    
+    <%-body %>
+    <script src="/js/app.js"></script>
+    <div class="push"></div>
+</div>
+<footer class="p-2 footer bg-blue-800 h-2 text-white mt-10 "><h2 class="text-center">©️  Copyright 2021 reserved by aayush  </h2>
+
+    
+</footer>
+</body>
+    
+</html>

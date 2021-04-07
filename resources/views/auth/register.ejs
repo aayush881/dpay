@@ -1,0 +1,45 @@
+<section class="register flex items-center justify-center pt-10 mb-10">
+<form action="/register" method="POST" class="form bg-white my-2 relative">
+    <% if(messages.err) { %>
+        <span class="text-red-500 text-sm"><%= messages.err %></span> 
+    <% } %>
+    <h3 class="text-2xl text-gray-900 font-semibold">Let us call you!</h3>
+    <div class="flex space-x-5 mt-3">
+        <input type="text" name="name" id="" placeholder="Your Name" value="<%= messages.name %>" class="border p-2  w-1/2">
+        <input type="tel" name="mobile_no" id="" placeholder="Your Number" value="<%= messages.mobile_no %>" class="border p-2 w-1/2">
+    </div>
+    <input type="email" name="email" id="" placeholder="Your Email" value="<%= messages.email %>" class="border p-2 w-full mt-3">
+    <p class="py-1 font-sans font-semibold border-b-2">Please enter your Bank Details</p>
+    <div class="flex space-x-5 mt-3">
+        <input type="text" name="account_name" id="" placeholder="Account Name" value="<%= messages.account_name %>" class="border p-2  w-1/2">
+        <input type="number" name="account_number" id="" placeholder="Account Number" value="<%= messages.account_number %>" class="border p-2 w-1/2">
+    </div>
+    <div class="flex space-x-5 mt-3">
+        <input type="text" name="bank_name" id="" placeholder="Bank Name" value="<%= messages.bank_name %>" class="border p-2  w-1/2">
+        <input type="text" name="branch_name" id="" placeholder="Branch Name" value="<%= messages.branch_name %>" class="border p-2 w-1/2">
+    </div>
+
+    <p class="py-1 font-sans font-semibold border-b-2">Address Details</p>
+    <div class="flex space-x-5 mt-3">
+        <input type="text" name="state" id="" placeholder="State" value="<%= messages.state %>" class="border p-2  w-1/2">
+        <input type="text" name="city" id="" placeholder="City" value="<%= messages.city %>" class="border p-2 w-1/2">
+    </div>
+
+
+    <div class="flex space-x-5 mt-3">
+        <input type="number" name="area_pincode" id="" placeholder="Area Pincode" value="<%= messages.area_pincode %>"class="border p-2  w-1/2">
+        <input type="tel" name="residence" id="" placeholder="Residence No."  value="<%= messages.residence %>"class="border p-2 w-1/2">
+    </div>
+    <div class="flex space-x-5 mt-3">
+        <input type="password" name="password" id="" placeholder="Password" value="<%= messages.password %>"class="border p-2  w-1/2">
+        <input type="password" name="mpin" id="" placeholder="MPIN" value="<%= messages.mpin %>"class="border p-2  w-1/2">
+    </div>
+    <textarea name="" id="" cols="10" rows="3" placeholder="Tell us about you " class="border p-2 mt-3 w-full"></textarea>
+    <div class="flex items-baseline space-x-2 mt-2">
+        <input type="checkbox" name="" id="" class="inline-block">
+        <p class="text-gray-600 text-sm">I consent to having this website store my submitted information so they can respond to my inquiry.</p>
+    </div>
+    <input type="submit" value="Submit" class="w-full mt-6 bg-blue-600 hover:bg-blue-500 text-white font-semibold p-3">
+
+</form>
+</section>

@@ -1,0 +1,33 @@
+<section class="transfer">
+    Welcome to transfer
+    <div>
+        <form action="/transfer_post" method="POST" class="bg-white p-6 my-10 relative w-1/2">
+            
+            <div class="icon bg-blue-600 text-white w-6 h-6 absolute flex items-center justify-center p-5" style="left:-40px"><i class="fal fa-phone-volume fa-fw text-2xl transform -rotate-45"></i></div>
+            <h3 class="text-2xl text-gray-900 font-semibold">Transfer to account</h3>
+            <% if(messages.err) { %>
+                <span class="text-red-500 text-sm"><%= messages.err %></span> 
+            <% } %>
+            <div class="flex space-x-5 mt-3">
+                <input type="text" name="account_name" id="" placeholder="Account Name" value="<%= messages.account_name %>" class="border p-2  w-1/2">
+                <input type="number" name="account_number" id="" placeholder="Account Number"  value="<%= messages.account_number %>" class="border p-2 w-1/2">
+            </div>
+            <div class="flex space-x-5 mt-3">
+                <input type="text" name="bank_name" id="" placeholder="Bank Name" value="<%= messages.bank_name %>" class="border p-2  w-1/2">
+                <input type="text" name="branch_name" id="" placeholder="Branch Name" value="<%= messages.branch_name %>" class="border p-2 w-1/2">
+            </div>
+
+            <div class="flex space-x-5 mt-3">
+                <input type="number" name="ifsc_code" id="" placeholder="IFSC Code" value="<%= messages.ifsc_code %>" class="border p-2  w-1/2">
+                <input type="number" name="mobile_no" id="" placeholder="Mobile Number" value="<%= messages.mobile_no %>" class="border p-2 w-1/2">
+            </div>
+            <div class="flex items-baseline space-x-2 mt-2">
+                <input type="checkbox" name="agree" id="" class="inline-block">
+                <p class="text-gray-600 text-sm">I hereby confirm that all details are right.</p>
+            </div>
+            <input type="submit" value="Submit" class="w-full mt-6 bg-blue-600 hover:bg-blue-500 text-white font-semibold p-3">
+
+        </form>
+    </div>
+    
+</section>

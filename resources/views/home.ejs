@@ -1,1 +1,40 @@
-<h1>Hello from Home</h1>
+<section class="hero py-16 px-8">
+    <div class="container mx-auto flex items-center justify-between">
+        <div class="w-1/2">
+            <h6 class="text-lg"><em>In need of loan?</em></h6>
+            <h1 class="text-5xl font-bold">Don't wait!</h1>
+            <% if(user && user.role=="customer"){ %>
+            <button class="px-4 py-2 mt-4 rounded-full text-white font-bold order-btn">Register Now</button>
+            <% } %>
+        </div>
+        <div class="w-1/2">
+            <img  src="/media/logo.png" height="500px" width="500px">
+        </div>
+    </div>
+</section>
+<!--
+<section id="s1" class="menu container mx-auto py-8">
+    <h1 class="text-xl font-bold mb-8">All Pizzas</h1>
+    <div class="grid grid-cols-1 md:grid-cols-4">
+       
+            <div class="w-64  px-2 py-3 box mx-2 my-2">
+                <div>
+                    <img class="h-40 mb-4 mx-auto" src="/media/logo.png">
+                    <div class="text-center">
+                        <h2 class="mb-4 text-lg">Cheesy</h2>
+                        <span class="py-1 px-4 rounded-full size">small</span>
+                    </div>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="font-bold text-lg">200</span>
+                        <button class="addCart px-2 py-1">
+                            + Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+     
+        
+    </div>
+
+</section>
+-->

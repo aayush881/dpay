@@ -1,0 +1,13 @@
+<section class="user">
+    <% if(messages.err) { %>
+        <span class="ml-3 text-red-500 text-md"><%= messages.err %></span> 
+    <% } %>
+    <div>
+        <form class="m-4 flex" action="/profile" method="POST">
+
+            
+          <input class="rounded-l-lg p-2 border-t mr-0 border-b border-l w-1/2 text-gray-800 border-gray-200 bg-white" placeholder="Search Account" name="id"/>
+          <button class="px-8 rounded-r-lg bg-yellow-400  text-gray-800 font-bold p-2 uppercase border-yellow-500 border-t border-b border-r">Search</button>
+      </form>
+  </div>
+</section>

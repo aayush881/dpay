@@ -1,0 +1,36 @@
+<section class="pb-10 mb-10">
+    <div class="text-center">
+        <h1 class="text-lg font-bold underline text-blue-600">Loan till today</h1>
+    </div>
+    <div class="space-y-4 mx-4 ">
+        <% for(var i=0; i < client.length; i++) { %>
+        <div class="bg-gray-200 p-10 rounded-3xl">
+            <div class="flex space-x-5 mt-3">
+                <div class="font-bold text-blue-600">Account Name: </div>
+                <div><%= client[i].account_name %></div>
+            </div>
+            <div class="flex space-x-5 mt-3">
+                <div class="font-bold text-blue-600">Account Number: </div>
+                <div><%= client[i].account_number %></div>
+            </div>
+            <div class="flex space-x-5 mt-3">
+                <div class="font-bold text-blue-600">Amount: </div>
+                <div>Rs <%= client[i].amount %></div>
+            </div>
+            <div class="flex space-x-5 mt-3">
+                <div class="font-bold text-blue-600">Start Date: </div>
+                <div><%= client[i].start_date %></div>
+            </div>
+            <div class="flex space-x-5 mt-3">
+                <div class="font-bold text-blue-600">End Date: </div>
+                <div><%= client[i].end_date %></div>
+            </div>
+            <div class="flex space-x-5 mt-3">
+                <div class="font-bold text-blue-600">Interest Rate: </div>
+                <div>6.8%</div>
+            </div>
+        </div>
+        <% } %>
+        
+    </div>
+</section>

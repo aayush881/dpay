@@ -1,0 +1,134 @@
+@import './variables';
+body {
+    font-family: 'Lato',sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: $dark;
+    height: 100%;
+}
+.admin a{
+    background: $primary;
+    &:hover{
+        background:$primary-hover ;
+    }
+}
+nav li a{
+    transition:$smooth;
+    &:hover{
+        color: $primary;
+    }
+    
+}
+
+
+section.hero{
+    background: $secondary;
+}
+
+section div div div span.size{
+    background: $gray;
+}
+
+.addCart{
+    border: 2px solid $primary;
+    border-radius: 40%;
+    color: $primary;
+    transition: $smooth;
+    &:hover
+    {
+        background: $primary;
+        border-color:$pure;
+        color:white;
+    }
+
+    &:focus
+    {
+        outline: none;
+    }
+}
+.order-btn{
+    transition: $smooth;
+    background: $primary;
+    &:hover{
+        background: $primary-hover;
+    }
+}
+.box{
+    background: $secondary;
+}
+
+.login{
+    background: $secondary;
+    min-height: calc(100vh-86px);
+}
+.aboutus{
+    min-height: calc(100vh-86px);
+}
+
+.btn-primary{
+    background: $primary;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: inline-block;
+
+  }
+  
+
+.acc{
+    display: hidden;
+}
+
+.status{
+    background: greenyellow;
+    min-height: calc(100vh-86px);;
+}
+
+
+svg {
+    height: 200px;
+    width: 200px;
+  }
+
+.balance{
+    &:focus{
+        display: none;
+    }
+    
+}
+.download-btn{
+    &:hover{
+        background: $gray;
+    }
+}
+.welcome li a,.dashboard li a{
+    transition:$smooth;
+    &:hover{
+        background: $primary;
+        color:$pure;
+    }
+    
+
+
+}
+
+
+.services li a{
+    transition:$smooth;
+    &:hover{
+        background: rgb(75, 122, 221);
+        color:$pure;
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 142px; /* .push must be the same height as .footer */
+}
+.pay{
+    background: rgb(25, 137, 211);
+}

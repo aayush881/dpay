@@ -1,0 +1,127 @@
+body {
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #232323;
+  height: 100%;
+}
+
+.admin a {
+  background: #5b7ff7;
+}
+.admin a:hover {
+  background: #0c09f0;
+}
+
+nav li a {
+  transition: all 0.3s ease-in-out;
+}
+nav li a:hover {
+  color: #5b7ff7;
+}
+
+section.hero {
+  background: #F8F8F8;
+}
+
+section div div div span.size {
+  background: #ccc;
+}
+
+.addCart {
+  border: 2px solid #5b7ff7;
+  border-radius: 40%;
+  color: #5b7ff7;
+  transition: all 0.3s ease-in-out;
+}
+.addCart:hover {
+  background: #5b7ff7;
+  border-color: #FFF;
+  color: white;
+}
+.addCart:focus {
+  outline: none;
+}
+
+.order-btn {
+  transition: all 0.3s ease-in-out;
+  background: #5b7ff7;
+}
+.order-btn:hover {
+  background: #0c09f0;
+}
+
+.box {
+  background: #F8F8F8;
+}
+
+.login {
+  background: #F8F8F8;
+  min-height: calc(100vh-86px);
+}
+
+.aboutus {
+  min-height: calc(100vh-86px);
+}
+
+.btn-primary {
+  background: #5b7ff7;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: inline-block;
+}
+
+.acc {
+  display: hidden;
+}
+
+.status {
+  background: greenyellow;
+  min-height: calc(100vh-86px);
+}
+
+svg {
+  height: 200px;
+  width: 200px;
+}
+
+.balance:focus {
+  display: none;
+}
+
+.download-btn:hover {
+  background: #ccc;
+}
+
+.welcome li a, .dashboard li a {
+  transition: all 0.3s ease-in-out;
+}
+.welcome li a:hover, .dashboard li a:hover {
+  background: #5b7ff7;
+  color: #FFF;
+}
+
+.services li a {
+  transition: all 0.3s ease-in-out;
+}
+.services li a:hover {
+  background: #4b7add;
+  color: #FFF;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -142px;
+  /* the bottom margin is the negative value of the footer's height */
+}
+
+.footer, .push {
+  height: 142px;
+  /* .push must be the same height as .footer */
+}
+
+.pay {
+  background: #1989d3;
+}
